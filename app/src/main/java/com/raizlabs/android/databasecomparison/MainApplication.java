@@ -1,5 +1,6 @@
 package com.raizlabs.android.databasecomparison;
 
+import com.abubusoft.kripton.android.KriptonLibrary;
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Configuration;
 import com.orm.Database;
@@ -46,6 +47,8 @@ public class MainApplication extends SugarApp {
         Realm.setDefaultConfiguration(realmConfig);
 
         mDatabase = getDatabase();
+
+        KriptonLibrary.init(this);
     }
 
     public static Database getSugarDatabase() {

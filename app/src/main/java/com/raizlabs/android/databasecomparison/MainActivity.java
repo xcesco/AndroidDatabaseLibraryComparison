@@ -20,6 +20,7 @@ import com.raizlabs.android.databasecomparison.dbflow.DBFlowTester;
 import com.raizlabs.android.databasecomparison.events.LogTestDataEvent;
 import com.raizlabs.android.databasecomparison.events.TrialCompletedEvent;
 import com.raizlabs.android.databasecomparison.greendao.GreenDaoTester;
+import com.raizlabs.android.databasecomparison.kripton.KriptonTester;
 import com.raizlabs.android.databasecomparison.ollie.OllieTester;
 import com.raizlabs.android.databasecomparison.ormlite.OrmLiteTester;
 import com.raizlabs.android.databasecomparison.realm.RealmTester;
@@ -193,7 +194,7 @@ public class MainActivity extends Activity {
         chartEntrySets.put(OrmLiteTester.FRAMEWORK_NAME, new ArrayList<BarEntry>());
         chartEntrySets.put(OllieTester.FRAMEWORK_NAME, new ArrayList<BarEntry>());
         chartEntrySets.put(RealmTester.FRAMEWORK_NAME, new ArrayList<BarEntry>());
-        //chartEntrySets.put(SugarTester.FRAMEWORK_NAME, new ArrayList<BarEntry>());
+        chartEntrySets.put(KriptonTester.FRAMEWORK_NAME, new ArrayList<BarEntry>());
         //chartEntrySets.put(AATester.FRAMEWORK_NAME, new ArrayList<BarEntry>());
         //chartEntrySets.put(SprinklesTester.FRAMEWORK_NAME, new ArrayList<BarEntry>());
     }
@@ -216,6 +217,8 @@ public class MainActivity extends Activity {
                 return Color.rgb(0x64, 0xB5, 0XF6); // blue
             case RealmTester.FRAMEWORK_NAME:
                 return Color.rgb(0xAE, 0xD5, 0X81); // light green
+            case KriptonTester.FRAMEWORK_NAME:
+                return Color.rgb(0x0E, 0x05, 0X01); // light green
             default:
                 return Color.WHITE;
         }
@@ -247,6 +250,8 @@ public class MainActivity extends Activity {
                 DBFlowTester.testAddressItems(applicationContext);
                 OllieTester.testAddressItems(applicationContext);
                 RealmTester.testAddressItems(applicationContext);
+
+                KriptonTester.testAddressItems(applicationContext);
                 //SprinklesTester.testAddressItems(applicationContext);
                 //AATester.testAddressItems(applicationContext);
                 //SugarTester.testAddressItems(applicationContext);
@@ -273,6 +278,8 @@ public class MainActivity extends Activity {
                 DBFlowTester.testAddressBooks(applicationContext);
                 OllieTester.testAddressBooks(applicationContext);
                 RealmTester.testAddressBooks(applicationContext);
+
+                KriptonTester.testAddressBooks(applicationContext);
                 //SprinklesTester.testAddressBooks(applicationContext);
                 //AATester.testAddressBooks(applicationContext);
                 //SugarTester.testAddressBooks(applicationContext);

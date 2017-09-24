@@ -3,13 +3,13 @@ apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'realm-android'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         applicationId "com.raizlabs.android.databasecomparison"
-        minSdkVersion 14
-        targetSdkVersion 22
+        minSdkVersion 19
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -19,6 +19,7 @@ android {
 dependencies {
 
     apt 'com.raizlabs.android:DBFlow-Compiler:2.1.0'
+    apt 'com.abubusoft:kripton-processor:2.0.2'
     compile "com.raizlabs.android:DBFlow-Core:2.1.0"
     compile "com.raizlabs.android:DBFlow:2.1.0"
 
@@ -36,4 +37,6 @@ dependencies {
 
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.0'
     compile 'de.greenrobot:eventbus:2.4.0'
+
+    compile 'com.abubusoft:kripton-android-library:2.0.2'
 }

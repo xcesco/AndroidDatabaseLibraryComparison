@@ -7,7 +7,7 @@ buildscript {
         maven { url "https://raw.github.com/Raizlabs/maven-releases/master/releases" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:2.3.3'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
 
         classpath "io.realm:realm-gradle-plugin:1.1.0"
